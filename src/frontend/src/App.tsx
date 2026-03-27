@@ -1,8 +1,13 @@
 import { motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-const USER_IMAGE =
-  "/assets/uploads/patient-woman-1-019d2115-7d26-77dd-b58d-ec10734a9021-1.jpg";
+const IMAGES = [
+  "/assets/uploads/slide1-dental-1-019d2ef9-bea0-73f8-ad17-105a93591650-1.jpg",
+  "/assets/uploads/slide2-smile-1-019d2ef9-bf11-756b-8f23-de41452cd1ca-2.jpg",
+  "/assets/uploads/dermatologist-019d2ef9-bf2e-72bf-8ee4-e1ed5456e29c-3.jpg",
+  "/assets/uploads/patient-man-019d2ef9-bfc5-76fa-98d5-7abc9215266e-4.jpg",
+  "/assets/uploads/patient-woman-1-019d2ef9-c127-732e-bcf9-a2cbef653fc4-5.jpg",
+];
 
 const PRODUCTS = [
   {
@@ -10,28 +15,28 @@ const PRODUCTS = [
     name: "The Silence Dress",
     description: "Hand-woven linen, bias cut",
     price: "$890",
-    image: USER_IMAGE,
+    image: IMAGES[0],
   },
   {
     id: 2,
     name: "Strata Coat",
     description: "Double-faced wool, structured",
     price: "$1,240",
-    image: USER_IMAGE,
+    image: IMAGES[1],
   },
   {
     id: 3,
     name: "The Void Shirt",
     description: "Japanese cotton voile, oversized",
     price: "$380",
-    image: USER_IMAGE,
+    image: IMAGES[2],
   },
   {
     id: 4,
     name: "Form Trouser",
     description: "Pressed wool, wide leg",
     price: "$620",
-    image: USER_IMAGE,
+    image: IMAGES[3],
   },
 ];
 
@@ -134,7 +139,6 @@ export default function App() {
         }}
       >
         <div className="max-w-[1400px] mx-auto px-8 py-5">
-          {/* Wordmark */}
           <div className="text-center mb-3">
             <button
               type="button"
@@ -153,7 +157,6 @@ export default function App() {
               RAHI
             </button>
           </div>
-          {/* Navigation */}
           <nav className="flex justify-center items-center gap-0">
             {["NEW ARRIVALS", "COLLECTIONS", "THE EDIT", "ABOUT", "STORES"].map(
               (item, i) => (
@@ -299,7 +302,7 @@ export default function App() {
           <FadeInSection delay={0.2}>
             <div className="aspect-[3/4] overflow-hidden">
               <img
-                src={USER_IMAGE}
+                src={IMAGES[4]}
                 alt="Editorial fashion — wide angle"
                 className="w-full h-full object-cover"
                 style={{
@@ -400,7 +403,6 @@ export default function App() {
           data-ocid="promo.section"
           className="max-w-[1400px] mx-auto px-8 pb-32 grid grid-cols-1 md:grid-cols-2 gap-4"
         >
-          {/* Left panel */}
           <FadeInSection delay={0}>
             <div
               data-ocid="promo.card"
@@ -408,7 +410,7 @@ export default function App() {
               style={{ aspectRatio: "4/5" }}
             >
               <img
-                src={USER_IMAGE}
+                src={IMAGES[2]}
                 alt="The Luna Coat"
                 className="w-full h-full object-cover"
                 style={{ transition: "transform 0.7s ease" }}
@@ -450,7 +452,6 @@ export default function App() {
             </div>
           </FadeInSection>
 
-          {/* Right panel */}
           <FadeInSection delay={0.15}>
             <div
               data-ocid="promo.card"
@@ -458,7 +459,7 @@ export default function App() {
               style={{ aspectRatio: "4/5" }}
             >
               <img
-                src={USER_IMAGE}
+                src={IMAGES[3]}
                 alt="Journal — The Edit"
                 className="w-full h-full object-cover"
                 style={{ transition: "transform 0.7s ease" }}
@@ -509,7 +510,6 @@ export default function App() {
       >
         <div className="max-w-[1400px] mx-auto px-8 py-20">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-            {/* Brand column */}
             <div className="md:col-span-1">
               <h2
                 className="font-display text-rahi-footer-text mb-6"
@@ -535,7 +535,6 @@ export default function App() {
               </p>
             </div>
 
-            {/* Nav columns */}
             <div>
               <p
                 className="font-sans-ui text-rahi-footer-text/50 mb-5"
@@ -606,7 +605,6 @@ export default function App() {
                 </button>
               ))}
 
-              {/* Email signup */}
               <div className="mt-8">
                 <p
                   className="font-sans-ui text-rahi-footer-text/50 mb-3"
@@ -647,7 +645,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Footer bottom */}
           <div
             className="border-t pt-8"
             style={{ borderColor: "oklch(0.95 0.009 75 / 0.1)" }}
